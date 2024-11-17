@@ -15,7 +15,7 @@ def signup_page(request):
             user.save()
             messages.success(request, 'Account created successfully')
             return redirect('login')
-    return render(request, 'authpages/sign_up.html')
+    return render(request, 'auth/signup.html')
 
 def login_page(request):
     if request.method == 'POST':
@@ -28,7 +28,7 @@ def login_page(request):
             return redirect('home')
         else:
             messages.error(request, 'Invalid credentials')
-    return render(request, 'authpages/login.html')
+    return render(request, 'auth/login.html')
 
 
 def logout_page(request):

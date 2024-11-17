@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+</head>
+<body class="signup-page">
+    <div class="container">
+        <div class="log-image">
+            <img src="{% static 'images/login.jpg' %}" alt="" >
+        </div>
+        <div log-page>
+        <h2>Register</h2>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <hr>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+ <!-- Added the 'name' attribute here -->
+            <button type="submit">Register</button>
+        </form>
+        <div class="account">
+            <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+        </div>
+
+        <div class="messages">
+            {% for message in messages %}
+                <p>{{ message }}</p>            
+            {% endfor %}
+        </div>
+    </div>
+    </div>
+</body>
+</html>
