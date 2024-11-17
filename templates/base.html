@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Website{% endblock %}</title>
+    <link rel="stylesheet" href="{% static '/home/css/styles.css' %}">
+</head>
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;400;500;600;700;800;900&family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    
+    <!--PLUGIN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    
+    <body>
+    
+    <!--TOP MENU-->
+    <menu class="top_menu flex">
+        <section class="flex_content">
+            <a href="emailto:info@lilliovi.com">
+                <i class="fa fa-envelope-o"></i>
+                info@mejobs.com
+            </a>
+            <a href="tel:1234567890">
+                <i class="fa fa-headphones"></i>
+                1234567890
+            </a>
+        </section>
+        <section class="flex_content">
+            <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
+            <a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" title="youtube"><i class="fa fa-youtube"></i></a>
+        </section>
+    </menu>
+    
+    <!--NAV-->
+    <nav>
+        <section class="flex_content">
+            <figure class="logo fixed_flex">
+                <img src="https://i.postimg.cc/02NrFwT5/canva.png" alt="">
+                <figcaption>
+                    <strong class="title">ME</strong> JOBS
+                </figcaption>
+            </figure>
+        </section>
+        <section class="flex_content nav_content" id="nav_content">
+            <a href="#" class="active">Home</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#blogs">Blogs</a>
+            <a href="javascript:void(0)" class="contact_btn">Contact us</a>
+            <a href="#about">About us</a>
+        </section>
+        <section class="flex_content">
+            <a href="javascript:void(0)" class="ham"><i class="fa fa-bars"></i></a>
+        </section>
+    </nav>
+    
+    <!--MENU-->
+    <menu id="menu" class="side_menu">
+        <a href="javascript:void(0)" class="close"><i class="fa fa-times"></i></a>
+        <strong class="fixed_flex logo"><img src="https://i.postimg.cc/02NrFwT5/canva.png" alt="Summit"  loading="lazy" /></strong>
+        <br>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Basic Parameters</a></li>
+            <li><a href="#">Notifications</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Features</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">Mandatory Disclosure</a>
+                <aside>
+                    <a href="#">Society registration</a>
+                    <a href="#">NOC</a>
+                </aside>
+            </li>
+            <li><a href="#">About us</a></li>
+            <li class="fixed_flex"><a href="javascript:void(0)" class="btn btn_1 chat_popup">SignUp/LogIn</a> <a href="#" class="btn btn_2 chat_popup">Admission</a> </li>
+        </ul>
+    </menu>
+    <main>
+        {% block content %}
+        <!-- Page content goes here -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
